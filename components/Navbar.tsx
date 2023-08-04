@@ -76,10 +76,10 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex flex-col items-center gap-y-3   ">
-              {NavbarArray.map((NavbarItem) => (
-                <li key={NavbarItem.href} className="font-normal text-base text-gray-700 ">
+              {NavbarArray.map((NavbarItems) => (
+                <li key={NavbarItems.href} className="font-normal text-base text-gray-700 ">
 
-                  <Link href={NavbarItem.href}>{NavbarItem.label}</Link>
+                  <Link href={NavbarItems.href}>{NavbarItems.label}</Link>
                 </li>
               ))}
             </ul>
