@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 // import { useSelector } from "react-redux";
 // import { RootState } from "@/app/store/store";
 import React from "react";
@@ -9,7 +9,6 @@ import { Search } from "lucide-react";
 import { NavbarArray } from "./Types";
 import Link from "next/link";
 import { AlignRight } from "lucide-react";
-import { X } from "lucide-react";
 
 import {
   Sheet,
@@ -39,9 +38,9 @@ const Navbar = () => {
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
           {NavbarArray.map((NavbarArray) => (
-            <li className="font-normal text-base ">
+            <li key={NavbarArray.href} className="font-normal text-base ">
               {/* <Link href={NavbarArray.href}>{NavbarArray.label}</Link> */}
-              <Link key={NavbarArray.href} href={NavbarArray.href}>{NavbarArray.label}</Link>
+              <Link href={NavbarArray.href} > {NavbarArray.label}</Link>
             </li>
           ))}
         </ul>
@@ -78,9 +77,9 @@ const Navbar = () => {
           <div>
             <ul className="flex flex-col items-center gap-y-3   ">
               {NavbarArray.map((NavbarArray) => (
-                <li className="font-normal text-base text-gray-700 ">
-                  {/* <Link href={NavbarArray.href}>{NavbarArray.label}</Link> */}
-                  <Link key={NavbarArray.href} href={NavbarArray.href}>{NavbarArray.label}</Link>
+                <li key={NavbarArray.href} className="font-normal text-base text-gray-700 ">
+
+                  <Link href={NavbarArray.href}>{NavbarArray.label}</Link>
                 </li>
               ))}
             </ul>
