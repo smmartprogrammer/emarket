@@ -37,10 +37,10 @@ const Navbar = () => {
       </Link>
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
-          {NavbarArray.map((NavbarArray) => (
-            <li key={NavbarArray.href} className="font-normal text-base ">
+          {NavbarArray.map((items) => (
+            <li key={items.href} className="font-normal text-base ">
               {/* <Link href={NavbarArray.href}>{NavbarArray.label}</Link> */}
-              <Link href={NavbarArray.href} > {NavbarArray.label}</Link>
+              <Link href={items.href} > {items.label}</Link>
             </li>
           ))}
         </ul>
@@ -76,10 +76,10 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex flex-col items-center gap-y-3   ">
-              {NavbarArray.map((NavbarArray) => (
-                <li key={NavbarArray.href} className="font-normal text-base text-gray-700 ">
+              {NavbarArray.map((items) => (
+                <li key={items.href} className="font-normal text-base text-gray-700 ">
 
-                  <Link href={NavbarArray.href}>{NavbarArray.label}</Link>
+                  <Link href={items.href}>{items.label}</Link>
                 </li>
               ))}
             </ul>
