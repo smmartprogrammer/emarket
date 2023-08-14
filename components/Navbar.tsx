@@ -29,7 +29,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="flex wrapper justify-between md:items-center md:py-9 md:px-32 py-10 xs:px-8 xs:py-8 sm:px-16 sm:py-16">
+    <div className="flex justify-between xs:px-8 xs:py-8 sm:px-16 sm:py-16 md:items-center md:py-9 md:px-24 py-10 lg:px-32 lg:py-10 xl:px-40 xl:py-11  ">
       <Link href="/">
         <div className=" ">
           <Image src={Logo} alt="LOGO" />{" "}
@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
           {NavbarArray.map((NavbarItem) => (
-            <li  className="font-normal text-base ">
+            <li className="font-normal text-base ">
               <Link key={NavbarItem.href} href={NavbarItem.href} > {NavbarItem.label}</Link>
             </li>
           ))}
@@ -76,7 +76,7 @@ const Navbar = () => {
           <div>
             <ul className="flex flex-col items-center gap-y-3   ">
               {NavbarArray.map((NavbarItems) => (
-                <li  className="font-normal text-base text-gray-700 ">
+                <li className="font-normal text-base text-gray-700 ">
                   <Link key={NavbarItems.href} href={NavbarItems.href}>{NavbarItems.label}</Link>
                 </li>
               ))}
