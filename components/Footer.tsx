@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { footerLinks } from "./index";
 import Logo from "@/public/Logo.webp";
-import { link } from "fs";
+// import { link } from "fs";
 
 const Footer = () => {
   return (

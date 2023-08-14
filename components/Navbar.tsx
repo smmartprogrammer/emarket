@@ -13,12 +13,8 @@ import { AlignRight } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import logo from "@/public/Logo.webp";
 
 const Navbar = () => {
   // const cartValue = useSelector(

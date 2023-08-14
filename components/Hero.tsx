@@ -8,7 +8,7 @@ import versace from "@/public/versace.webp";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
-import Link from "next/link";
+// import Link from "next/link";
 
 const Hero = () => {
   return (
