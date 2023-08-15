@@ -30,10 +30,10 @@ const Navbar = () => {
       </Link>
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
-          {NavbarArray.map((item: NavbarItemTypes, index: number) => (
+          {NavbarArray.map((items: NavbarItemTypes, index: number) => (
             <div key={index} >
               <li  className="font-normal text-base ">
-                <Link href={item.href} > {item.label}</Link>
+                <Link href={items.href} > {items.label}</Link>
               </li>
             </div>
           ))}
