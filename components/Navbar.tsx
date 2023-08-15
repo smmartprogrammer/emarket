@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "@/public/Logo.webp";
 import { ShoppingCart } from "lucide-react";
 import { Search } from "lucide-react";
-import { NavbarArray } from "./Types";
+import { NavbarArray, NavbarItemTypes } from "./Types";
 import Link from "next/link";
 import { AlignRight } from "lucide-react";
 
@@ -30,10 +30,10 @@ const Navbar = () => {
       </Link>
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
-          {NavbarArray.map((NavbarItem) => (
-            <div key={NavbarItem.href}>
+          {NavbarArray.map((item: NavbarItemTypes, index: number) => (
+            <div >
               <li className="font-normal text-base ">
-                <Link href={NavbarItem.href} > {NavbarItem.label}</Link>
+                <Link href={item.href} > {item.label}</Link>
               </li>
             </div>
           ))}
@@ -72,9 +72,9 @@ const Navbar = () => {
             <ul className="flex flex-col items-center gap-y-3   ">
               {NavbarArray.map((NavbarItems) => (
                 <div key={NavbarItems.href}>
-                <li className="font-normal text-base text-gray-700 ">
-                  <Link  href={NavbarItems.href}>{NavbarItems.label}</Link>
-                </li>
+                  <li className="font-normal text-base text-gray-700 ">
+                    <Link href={NavbarItems.href}>{NavbarItems.label}</Link>
+                  </li>
                 </div>
               ))}
             </ul>
