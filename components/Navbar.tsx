@@ -24,14 +24,14 @@ const Navbar = () => {
   return (
     <div className="flex justify-between xs:px-8 xs:py-8 sm:px-16 sm:py-16 md:items-center md:py-9 md:px-24 py-10 lg:px-32 lg:py-10 xl:px-40 xl:py-11  ">
       <Link href="/">
-        <div className=" ">
+        <div className="w-36 flex shrink-0 ">
           <Image src={Logo} alt="LOGO" />{" "}
         </div>
       </Link>
       <div className="">
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
           {NavbarArray.map((item: NavbarItemTypes, index: number) => (
-            <div >
+            <div key={index} >
               <li className="font-normal text-base ">
                 <Link href={item.href} > {item.label}</Link>
               </li>
