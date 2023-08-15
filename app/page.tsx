@@ -1,9 +1,16 @@
 import Hero from "@/components/Hero";
+import Jewellery from "@/components/Jewellery";
+import Newsletter from "@/components/Newsletter";
+import Promotion from "@/components/Promotion";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Hero />
+      <Promotion />
+      <Jewellery />
+      <Newsletter />
+      
     </main>
   )
 }
