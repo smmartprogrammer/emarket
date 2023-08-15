@@ -32,8 +32,8 @@ const Navbar = () => {
         <ul className="md:flex md:justify-evenly items-center gap-x-7  md:block xs:hidden ">
           {NavbarArray.map((item: NavbarItemTypes, index: number) => (
             <div  >
-              <li className="font-normal text-base ">
-                <Link key={index} href={item.href} > {item.label}</Link>
+              <li key={index} className="font-normal text-base ">
+                <Link  href={item.href} > {item.label}</Link>
               </li>
             </div>
           ))}
@@ -70,10 +70,10 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex flex-col items-center gap-y-3   ">
-              {NavbarArray.map((NavbarItems) => (
-                <div key={NavbarItems.href}>
+            {NavbarArray.map((item: NavbarItemTypes, index: number) => (
+                <div key={index}>
                   <li className="font-normal text-base text-gray-700 ">
-                    <Link href={NavbarItems.href}>{NavbarItems.label}</Link>
+                    <Link href={item.href}>{item.label}</Link>
                   </li>
                 </div>
               ))}
