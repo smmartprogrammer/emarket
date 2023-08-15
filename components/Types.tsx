@@ -7,6 +7,14 @@ export interface NavbarItemTypes {
   href: string;
 }
 
+export const NavbarArray: Array<NavbarItemTypes> = [
+  { label: "Female", href: "/gender/female" },
+  { label: "Male", href: "/gender/male" },
+  { label: "Kids", href: "/gender/kids" },
+  { label: "All Products", href: "/allproducts" },
+];
+
+
 export interface oneProductType {
   _id: string;
   quantity:number,
@@ -41,11 +49,5 @@ export interface Product {
   item: any
 }
 
-export const NavbarArray: Array<NavbarItemTypes> = [
-  { label: "Female", href: "/gender/female" },
-  { label: "Male", href: "/gender/male" },
-  { label: "Kids", href: "/gender/kids" },
-  { label: "All Products", href: "/allproducts" },
-];
 
 export const ProductsList = [];
