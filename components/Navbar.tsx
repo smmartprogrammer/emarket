@@ -1,6 +1,3 @@
-// "use client"
-// import { useSelector } from "react-redux";
-// import { RootState } from "@/app/store/store";
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/Logo.webp";
