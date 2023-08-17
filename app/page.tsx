@@ -3,22 +3,26 @@ import Jewellery from "@/components/Jewellery";
 import Newsletter from "@/components/Newsletter";
 import ProductCarrosal from "@/components/ProductCarrosal";
 import Promotion from "@/components/Promotion";
+import { oneProductType, responseType } from "@/components/Types";
 
 
-async function fetchAllProductData() {
-  let res = await fetch(`http://localhost:3000/api/products`)
+
+async function fetchAllProductsData() {
+  let res = await fetch(`https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2021-06-07/data/query/production?query=*[_type == "products"]`, {
+    next: {
+      revalidate: 60
+    }
+  });
 
   if (!res.ok) {
-    throw new Error("failed to fetch")
+    throw new Error("Failed to fetch")
   }
-  return res.json()
 
-
+  return res.json();
 }
 
 export default async function Home() {
-  let {response} =  await fetchAllProductData()
-  
+  let { result }: responseType = await fetchAllProductsData();  
   
   
   return (
@@ -28,7 +32,7 @@ export default async function Home() {
       <Hero />
       <Promotion />
       <Jewellery />
-      <ProductCarrosal ProductData={response} />
+      <ProductCarrosal ProductData={result} />
       <Newsletter />
 
     </main>

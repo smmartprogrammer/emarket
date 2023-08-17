@@ -12,40 +12,35 @@ export const NavbarArray: Array<NavbarItemTypes> = [
   { label: "All Products", href: "/allproducts" },
 ];
 
+export interface assetImageType {
+  _type: string,
+  _ref: string,
+};
 
-// export interface oneProductType {
-//   _id: string;
-//   quantity:number,
-//   _rev: String,
-//   _type:string,
-//   productName:string,
-//   _creditAt:string,
-//   _id:string,
-//   _updateAt: string,
-//   // image:Array<imageType,>
-//   name: string;
-//   title:string;
-//   price: number;
-//   // img: image | string | StaticImageData;
-//   category: string;
-//   gender?: string;
-//   href?: string;
-//   item: any
-// }
+export interface imagesType {
+  asset: assetImageType,
+  _type: string,
+  alt: string,
+  _key: string,
+}
 
 
+export interface oneProductType {
+  slug: any,
+  quantity: number,
+  _rev: string,
+  _type: string,
+  productName: string,
+  _createdAt: string,
+  _id: string,
+  _updatedAt: string,
+  image: Array<imagesType>
+  description: any,
+  productTypes: Array<string>,
+  size: Array<string>,
+  price: number,
+}
 
-// export interface Product {
-//   id: string;
-//   name: string;
-//   title:string;
-//   price: number;
-//   // img: image | string | StaticImageData;
-//   category: string;
-//   gender?: string;
-//   href?: string;
-//   item: any
-// }
-
-
-// export const ProductsList = [];
+export interface responseType {
+  result: Array<oneProductType>
+}
