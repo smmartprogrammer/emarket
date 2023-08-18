@@ -1,9 +1,11 @@
 import Hero from "@/components/Hero";
 import Jewellery from "@/components/Jewellery";
 import Newsletter from "@/components/Newsletter";
+import ProductCarrosal from "@/components/ProductCarrosal";
 import Promotion from "@/components/Promotion";
-import SimpleSlider from "@/components/Slider";
+
 import { oneProductType, responseType } from "@/components/Types";
+
 
 
 
@@ -30,12 +32,11 @@ export default async function Home() {
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      {/* <Hero />
+      <Hero />
       <Promotion />
-      <Jewellery /> */}
-      {/* <ProductCarrosal ProductData={result} /> */}
-      {/* <Newsletter /> */}
-      <SimpleSlider ProductData={result} />
+      <Jewellery />
+      <ProductCarrosal ProductData={result} />
+      <Newsletter />
     </main>
   )
 }

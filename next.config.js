@@ -6,17 +6,17 @@ const nextConfig = {
     }
 }
 
-module.exports = {
-    webpack: (config, { isServer }) => {
-      // Add CSS loader for .css files
-      config.module.rules.push({
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      });
+// // module.exports = {
+// //     webpack: (config, { isServer }) => {
+// //       // Add CSS loader for .css files
+// //       config.module.rules.push({
+// //         test: /\.css$/,
+// //         use: ['style-loader', 'css-loader'],
+// //       });
   
-      // Return the modified configuration
-      return config;
-    },
-  };
+// //       // Return the modified configuration
+// //       return config;
+// //     },
+//   };
 
 module.exports = nextConfig
