@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import Jewellery from "@/components/Jewellery";
 import Newsletter from "@/components/Newsletter";
-import ProductCarrosal from "@/components/ProductCarrosal";
 import Promotion from "@/components/Promotion";
+import SimpleSlider from "@/components/Slider";
 import { oneProductType, responseType } from "@/components/Types";
 
 
@@ -23,20 +23,19 @@ async function fetchAllProductsData() {
 }
 
 export default async function Home() {
-  let { result }: responseType = await fetchAllProductsData();  
-  
-  console.log(result);
-  
+  let { result }: responseType = await fetchAllProductsData();
+
+
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      <Hero />
+      {/* <Hero />
       <Promotion />
-      <Jewellery />
-      <ProductCarrosal ProductData={result} />
-      <Newsletter />
-
+      <Jewellery /> */}
+      {/* <ProductCarrosal ProductData={result} /> */}
+      {/* <Newsletter /> */}
+      <SimpleSlider ProductData={result} />
     </main>
   )
 }
