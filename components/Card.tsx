@@ -2,12 +2,15 @@ import React, { FC } from 'react'
 import { oneProductType } from './Types'
 import { urlForImage } from '@/sanity/lib/image'
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 
 
 
 const Card: FC<{ singleProduct: oneProductType }> = ({ singleProduct }) => {
     return (
+<Link    href={`/cataloge${singleProduct.slug.current}`}    >
         <div className='max-w-sm min-w-[24rem] space-y-3 select-none hover:scale-110 duration-300'>
             <div className='relative w-full'>
                 <div className='absolute inset-0 z-10' />
@@ -22,6 +25,7 @@ const Card: FC<{ singleProduct: oneProductType }> = ({ singleProduct }) => {
                 {singleProduct.price}
             </p>
         </div>
+        </Link>
         
     )
 }
