@@ -56,7 +56,8 @@ export default class AllProductsCompo extends Component<{ ProductData: propsType
                             <b>Yay! You have seen it all</b>
                         </p>
                     }
-                    className="content-center justify-center py-10 grid grid-col-1 md:grid-col-2 lg:grid-col-3 gap-4 "
+                    className="grid grid-col-3"
+                    // className="content-center justify-center py-10 grid grid-col-1 md:grid-col-2 lg:grid-col-3 gap-4 "
                 >{this.state.items.map((item: oneProductType, index: number) => (
                     <Card key={index} singleProduct={item} />
                 ))}

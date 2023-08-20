@@ -30,4 +30,3 @@ const Card: FC<{ singleProduct: oneProductType }> = ({ singleProduct }) => {
 }
 
 export default Card
-

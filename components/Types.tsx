@@ -17,16 +17,23 @@ export interface assetImageType {
   _ref: string,
 };
 
+export interface Image_2 {
+  key: string,
+  };
+
+
 export interface imagesType {
   asset: assetImageType,
   _type: string,
-  alt: string,
+    alt: string,
   _key: string,
+  [key: string]: any,
+  
 }
 
 
 export interface oneProductType {
-  slug: any,
+  slug:any,
   quantity: number,
   _rev: string,
   _type: string,
